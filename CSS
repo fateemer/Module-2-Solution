@@ -1,1 +1,48 @@
 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+section {
+  box-sizing: border-box;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffcc66; /* Unique color for section title region */
+  padding: 5px 10px;
+  border-bottom-left-radius: 5px;
+  color: black; /* Adjust text color for better readability */
+}
+
+/* Desktop View */
+.desktop-view {
+  width: 33.33%; /* Each section takes up equal space in the desktop view */
+  float: left;
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 991px) {
+  .desktop-view {
+    width: 48%; /* 2 sections in the first row */
+    float: left;
+  }
+
+  .desktop-view:nth-child(3) {
+    width: 100%; /* Full width for the 3rd section in the second row */
+    clear: both;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+  .desktop-view {
+    width: 100%; /* Each section takes up the entire row in mobile view */
+    float: none;
+  }
+}
